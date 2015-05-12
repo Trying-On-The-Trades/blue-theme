@@ -8,6 +8,9 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 article,
 aside,
 details,
@@ -55,7 +58,7 @@ template {
  *    user zoom.
  */
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -940,6 +943,27 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 /*********************
 INPUTS
 *********************/
+
+#main_full input[type="text"],
+#main_full input[type="password"],
+#main_full input[type="datetime"],
+#main_full input[type="datetime-local"],
+#main_full input[type="date"],
+#main_full input[type="month"],
+#main_full input[type="time"],
+#main_full input[type="week"],
+#main_full input[type="number"],
+#main_full input[type="email"],
+#main_full input[type="url"],
+#main_full input[type="search"],
+#main_full input[type="tel"],
+#main_full input[type="color"],
+#main_full select,
+#main_full textarea,
+#main_full .field{
+  max-width: none;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -960,18 +984,18 @@ textarea,
   display: block;
   height: 40px;
   line-height: 40px;
-  padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
   color: #5c6b80;
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
-  border: 0;
   width: 100%;
   max-width: 400px;
+  border: 1px solid #dedede;
+  padding: .5em;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #eaedf2;
+  background-color: #FFFFFF;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
   input[type="text"]:focus, input[type="text"]:active,
@@ -1007,7 +1031,8 @@ textarea,
   textarea:active,
   .field:focus,
   .field:active {
-    background-color: #f7f8fa; }
+    outline: none;
+    background: #fafafa; }
   input[type="text"].error, input[type="text"].is-invalid,
   input[type="password"].error,
   input[type="password"].is-invalid,
@@ -1342,7 +1367,7 @@ HEADER STYLES
   background-color: #147BB5;
   position: fixed;
   left: 0;
-  top: 32px;
+  top: 0;
   width: 100%;
   z-index: 9
 }
@@ -1420,7 +1445,6 @@ POSTS & CONTENT STYLES
 
 .hentry {
   background-color: white;
-  border-radius: 3px;
   margin-bottom: 1.5em;
   border: 1px solid #dedede; }
   .hentry header {
@@ -1656,7 +1680,7 @@ COMMENT STYLES
   .comment.odd {
     background-color: white; }
   .comment.even {
-    background: #f8f9fa; }
+    background: #fafafa; }
 
 /* comment meta */
 /* comment content */
@@ -1702,7 +1726,8 @@ COMMENT FORM STYLES
 .form-allowed-tags {
   padding: 1.5em;
   background-color: #f8f9fa;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+  display: none; }
 
 /* comment submit button */
 #submit {
@@ -1742,9 +1767,18 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #323944;
-  color: #f8f9fa; }
+  background-color: #eeeeee;
+  color: #222;
+  height: 150px;
+  text-align: center; }
 
+.footer ul li a {
+  color: #9A9A9A;
+}
+
+.footer ul li a:hover {
+  color: #147BB5;
+}
 /*
 if you checked out the link above:
 http://www.alistapart.com/articles/organizing-mobile/
@@ -2145,6 +2179,7 @@ be set to display none.
 
 .widget ul li {
   display: block;
+  margin-bottom: 0;
 }
 
 .widget ul li a {
@@ -2155,3 +2190,40 @@ be set to display none.
   color: #147BB5;
   text-decoration: none;
 }
+
+#searchform .search {
+  background: url(../images/lupa.png) no-repeat #FFF;
+  border: 1px solid #dedede;
+  padding-left: 30px;
+  border-radius: 0;
+  outline: none;
+}
+
+#search-2 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.comment-form-author {
+  float: left;
+  width: 48%;
+}
+
+.comment-form-email {
+  float: left;
+  width: 48%;
+  margin-left: 4%;
+}
+
+.comment-form-url {
+  display: none;
+}
+
+
+
+
+
+
+
+
