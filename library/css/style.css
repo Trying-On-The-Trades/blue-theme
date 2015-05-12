@@ -2220,6 +2220,12 @@ be set to display none.
   display: none;
 }
 
+#menu-test-1 {
+  float: none;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+
 
 
 
