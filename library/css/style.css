@@ -664,7 +664,7 @@ them however you see fit.
     padding-right: 0.75em;
     width: 75%; } }
 /* Portrait tablet to landscape */
-@media (min-width: 768px) and (max-width: 1029px) {
+@media (min-width: 768px) and (max-width: 1069px) {
   .t-all {
     float: left;
     padding-right: 0.75em;
@@ -716,7 +716,7 @@ them however you see fit.
     padding-right: 0.75em;
     width: 80%; } }
 /* Landscape to small desktop */
-@media (min-width: 1030px) {
+@media (min-width: 1070px) {
   .d-all {
     float: left;
     padding-right: 0.75em;
@@ -1895,7 +1895,7 @@ you can add resource intensive styles.
   LAYOUT & GRID STYLES
   *********************/
   .wrap {
-    width: 760px; }
+    width: 90%; }
 
   /*********************
   HEADER STYLES
@@ -2027,7 +2027,7 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 90%; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
@@ -2162,6 +2162,10 @@ be set to display none.
 
 #main_full {
   width: 100%;
+}
+
+#main_full .entry-content {
+  height: 400px;
 }
 
 .widget {
