@@ -374,6 +374,18 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
+/* define the style for the checkbox and its labels for the mobile menu */
+#control-nav {
+  display: none;
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+
+#inner-header label {
+  display: inline;
+}
+
 /**
  * 1. Remove default vertical scrollbar in IE 8/9.
  * 2. Improve readability and alignment in all browsers.
@@ -662,7 +674,121 @@ them however you see fit.
   .m-3of4 {
     float: left;
     padding-right: 0.75em;
-    width: 75%; } }
+    width: 75%; } 
+
+/* Menu Resposive */
+  header .control-nav {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: block;
+    width: 30px;
+    padding: 5px 0;
+    border: solid #FFF;
+    border-width: 3px 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+ 
+  header .control-nav:before {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #FFF;
+  }
+ 
+  header .control-nav-close {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+ 
+  header nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    border-left: 1px solid #ccc;
+    background: #fff;
+    overflow-x: auto;
+    z-index: 2;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+  }
+
+  #control-nav:checked ~ .control-nav-close {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+ 
+  #control-nav:checked ~ nav {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  
+  header nav {
+    background: #FAFAFA;
+  }
+
+  header ul#menu-test {
+    width: 100%;
+    text-align: center;
+  }
+
+  header ul#menu-test li a{
+    color: #9A9A9A;
+    display: block;
+    padding: 15px;
+  }
+
+  header ul#menu-test li{
+    display: block;
+    text-align: center;
+    border-top: 1px solid #ccc;
+  }
+
+  header ul#menu-test li:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+
+  header ul#menu-test li a:hover {
+    color: #147BB5;
+    background: #ECECEC;
+    border-top: none;
+  }
+  
+  /* take off the borders from the sub-menu */
+  header ul#menu-test li ul li,
+  header ul#menu-test li ul li:last-child {
+    border: none;
+  }
+
+  /* hide the menu that was being displayed on the footer of the page */
+  #menu-test-1 {
+    display: none !important;
+  }
+
+  footer.footer {
+    margin-top: 2em;
+    padding-top: 5em;
+  }
+  }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1069px) {
   .t-all {
@@ -714,7 +840,7 @@ them however you see fit.
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
-    width: 80%; } }
+    width: 80%; }}
 /* Landscape to small desktop */
 @media (min-width: 1070px) {
   .d-all {
@@ -1441,7 +1567,7 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 #content {
-  margin-top: 9em; }
+  margin-top: 7em; }
 
 .hentry {
   background-color: white;
@@ -1930,11 +2056,11 @@ you can add resource intensive styles.
       .nav li ul.sub-menu,
       .nav li ul.children {
         margin-top: 0;
-        border: 1px solid #ccc;
         border-top: 0;
         position: absolute;
         visibility: hidden;
         z-index: 8999;
+        background: #147BB5;
         /* highlight sub-menu current page */ }
         .nav li ul.sub-menu li,
         .nav li ul.children li {
@@ -1945,11 +2071,11 @@ you can add resource intensive styles.
           */ }
           .nav li ul.sub-menu li a,
           .nav li ul.children li a {
-            padding-left: 10px;
+            padding:0 20px;
             border-right: 0;
             display: block;
-            width: 180px;
-            border-bottom: 1px solid #ccc; }
+            margin-bottom: 3px;
+            color: #A8CAE3; }
           .nav li ul.sub-menu li:last-child a,
           .nav li ul.children li:last-child a {
             border-bottom: 0; }
@@ -1960,6 +2086,12 @@ you can add resource intensive styles.
       .nav li:hover > ul {
         top: auto;
         visibility: visible; }
+
+        .nav li ul.sub-menu li a:hover,
+          .nav li ul.children li a:hover {
+            color: #FFFFFF;
+            text-decoration: none;
+          }
 
   /* end .nav */
   /*********************
@@ -2230,6 +2362,18 @@ be set to display none.
   display: inline-block;
 }
 
+#menu-test-1 ul.sub-menu {
+  background: #EEEEEE;
+  bottom: 35px;
+}
+
+#menu-test-1 ul.sub-menu li a {
+  color: #9A9A9A;
+}
+
+#menu-test-1 ul.sub-menu li a:hover {
+  color: #147BB5;
+}
 
 
 
