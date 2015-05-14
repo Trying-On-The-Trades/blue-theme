@@ -1586,7 +1586,8 @@ POSTS & CONTENT STYLES
 .single-title,
 .page-title,
 .entry-title {
-  margin: 0; }
+  margin: 0; 
+  font-family: "Open Sans";}
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1751,6 +1752,8 @@ COMMENT STYLES
   padding: 0.75em;
   margin: 0;
   border-top: 1px solid #f8f9fa;
+  font-family: "Open Sans";
+  font-size: 1.5em;
   /* number of comments span */ }
 
 .commentlist {
@@ -1837,7 +1840,9 @@ COMMENT FORM STYLES
   border-top: 1px solid #f8f9fa; }
 
 #reply-title {
-  margin: 0; }
+  margin: 0; 
+  font-family: "Open Sans";
+  font-size: 1.5em;}
 
 .logged-in-as {
   color: #9fa6b4;
