@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Test
+Template Name: Iframe
 */
 
 get_header(); ?>

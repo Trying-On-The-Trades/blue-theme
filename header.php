@@ -53,7 +53,11 @@
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
-
+					
+					<!-- Mobile menu using css and html -->
+					<input type="checkbox" id="control-nav" />
+				    <label for="control-nav" class="control-nav"></label>
+				    <label for="control-nav" class="control-nav-close"></label>
 
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
