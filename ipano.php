@@ -7,6 +7,11 @@ Template Name: iPano
 <div id="page">
 
     <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        
         #ppm_viewer{
             width: 100% !important;
             height: 100% !important;

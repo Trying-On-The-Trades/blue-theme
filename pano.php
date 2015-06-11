@@ -26,7 +26,12 @@ $pano_script = load_pano($pano_id);
 ?>
 <div id="page">
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
-
+<style type="text/css">
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+</style>
 
 <script>
     
