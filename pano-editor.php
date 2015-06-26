@@ -24,7 +24,10 @@ if (isset($_GET['pano_id'])){
 $pano_script = load_pano($pano_id);
 
 $content_root = content_url();
-$pano_editor = WP_PLUGIN_URL . '/vocabulary-plugin/hotspot_editor.php';
+$pano_editor = WP_PLUGIN_URL . '/vocabulary-plugin/hotspot-editor/hotspot_editor.php';
+
+$deck_id = $_GET['game_id'];
+$game_type = '1';
 ?>
 <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.2/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
 <script src="//code.jquery.com/jquery-latest.js"></script>
@@ -38,8 +41,13 @@ $pano_editor = WP_PLUGIN_URL . '/vocabulary-plugin/hotspot_editor.php';
     }
 
     function newHotspot(){
+        var mx = krpano.get("mouse.x");
+        var my = krpano.get("mouse.y");
+        var pt = krpano.screentosphere(mx,my);
 
-        $.featherlight('<?=$pano_editor?>');
+        var url = '<?=$pano_editor?>?point_x=' + pt.x + '&point_y=' + pt.y + '&deck_id=' + <?=$deck_id?> + '&game_type=""';
+
+        $.featherlight(url);
     }
 
     function addHotspot(hotspotName){
