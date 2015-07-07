@@ -28,11 +28,8 @@ $pano_script = load_pano($pano_id);
 <style>
     body{
         background-color: #000;
-    }
-
-    #page{
-        width: 100% !important;
-        height: 100% !important;
+        margin: 0;
+        overflow: hidden;
     }
 
     #panoDIV{
