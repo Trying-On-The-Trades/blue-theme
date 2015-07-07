@@ -24,6 +24,20 @@ if (isset($_GET['pano_id'])){
 $pano_script = load_pano($pano_id);
 
 ?>
+
+<style>
+    body{
+        background-color: #000;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    #panoDIV{
+        width: 100% !important;
+        height: 100% !important;
+    }
+</style>
+
 <div id="page">
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
 <style type="text/css">
