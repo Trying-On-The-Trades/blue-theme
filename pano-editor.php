@@ -40,34 +40,10 @@ $deck_id = $_GET['game_id'];
         var my = krpano.get("mouse.y");
         var pt = krpano.screentosphere(mx,my);
 
-        var url = '<?=$pano_editor?>?point_x=' + pt.x + '&point_y=' + pt.y + '&deck_id=' + <?=$deck_id?>;
+        var url = '<?=$pano_editor?>?point_x=' + pt.x + '&point_y=' + pt.y + '&deck_id=' + <?=$deck_id?> + '&pano_id=' + <?=$pano_id?>;
 
         $.featherlight(url);
     }
-
-//    function addHotspot(hotspotName){
-//      var mx = krpano.get("mouse.x");
-//      var my = krpano.get("mouse.y");
-//      var pt = krpano.screentosphere(mx,my);
-//
-//      var hotspotAddName = "addhotspot("  + hotspotName + ")";
-//      var hotspotURL     = "set(hotspot[" + hotspotName + "].url,'<?//=$content_root?>///panos/1/info.png');";
-//      var hotspotX       = "set(hotspot[" + hotspotName + "].ath," + pt.x + ");";
-//      var hotspotY       = "set(hotspot[" + hotspotName + "].atv," + pt.y + ");";
-//      var hotspotScale   = "set(hotspot[" + hotspotName + "].scale,0.5);";
-//      var hotspotZoom    = "set(hotspot[" + hotspotName + "].zoom,'true');";
-//      var hotspotOnClick = "set(hotspot[" + hotspotName + "].onclick, 'onClickevent');";
-//
-//      krpano.call(hotspotAddName);
-//      krpano.call(hotspotURL);
-//      krpano.call(hotspotX);
-//      krpano.call(hotspotY);
-//      krpano.call(hotspotScale);
-//      krpano.call(hotspotZoom);
-//      krpano.call(hotspotOnClick);
-//
-//    }
-
     
     // Handle resizing the pano no matter the browser size
     function resize_pano(height, width){
