@@ -24,7 +24,7 @@ if (isset($_GET['pano_id'])){
 $pano_script = load_pano($pano_id);
 
 $content_root = content_url();
-$pano_editor = WP_PLUGIN_URL . '/vocabulary-plugin/hotspot-editor/hotspot_editor.php';
+$pano_editor = WP_PLUGIN_URL . '/panomanager/hotspot-editor/hotspot_editor.php';
 
 $deck_id = $_GET['game_id'];
 ?>
@@ -40,9 +40,15 @@ $deck_id = $_GET['game_id'];
         var my = krpano.get("mouse.y");
         var pt = krpano.screentosphere(mx,my);
 
-        var url = '<?=$pano_editor?>?point_x=' + pt.x + '&point_y=' + pt.y + '&deck_id=' + <?=$deck_id?> + '&pano_id=' + <?=$pano_id?>;
+        var deck_id = "<?=$deck_id?>";
 
-        $.featherlight(url);
+        if(deck_id == "" || deck_id == null){
+            var url = '<?=$pano_editor?>?point_x=' + pt.x + '&point_y=' + pt.y + '&pano_id=' + <?=$pano_id?>;
+        }else{
+            var url = '<?=$pano_editor?>?point_x=' + pt.x + '&point_y=' + pt.y + '&deck_id=' + <?=$deck_id?> + '&pano_id=' + <?=$pano_id?>;
+        }
+
+        $.featherlight(url, null, false);
     }
     
     // Handle resizing the pano no matter the browser size
